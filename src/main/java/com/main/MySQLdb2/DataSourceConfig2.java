@@ -28,33 +28,7 @@ import jakarta.persistence.EntityManagerFactory;
 		transactionManagerRef = "db2TransactionManager")
 public class DataSourceConfig2 {
 
-//    // Configuration for db1 (Teacher)
-//    @Primary
-//    @Bean(name = "db1DataSource")
-//    @ConfigurationProperties(prefix = "spring.datasource.db1")
-//    public DataSource db1DataSource() {
-//        return DataSourceBuilder.create().build();
-//    }
-
-//    @Primary
-//    @Bean(name = "db1EntityManagerFactory")
-//    public LocalContainerEntityManagerFactoryBean db1EntityManagerFactory(
-//        @Qualifier("db1DataSource") DataSource dataSource) {
-//        LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
-//        em.setDataSource(dataSource);
-//        em.setPackagesToScan("com.main.db1"); // Adjust the package path for db1
-//        HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
-//        em.setJpaVendorAdapter(vendorAdapter);
-//        return em;
-//    }
-
-//    @Primary
-//    @Bean(name = "db1TransactionManager")
-//    public PlatformTransactionManager db1TransactionManager(
-//        @Qualifier("db1EntityManagerFactory") EntityManagerFactory entityManagerFactory) {
-//        return new JpaTransactionManager(entityManagerFactory);
-//    }
-
+ 
 	// Configuration for db2 (Student)
 	@Bean(name = "db2DataSource")
 	@ConfigurationProperties(prefix = "spring.datasource.db2")

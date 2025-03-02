@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  mysql:
+    container_name: mysql-sql-bsn
+    image: mysql:latest
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword  # Set root password
+      MYSQL_DATABASE: book_social_network  # Define your database name
+      MYSQL_USER: username  # Define MySQL user
+      MYSQL_PASSWORD: password  # Define MySQL password
+    volumes:
+      - mysql-data:/var/lib/mysql  # Correct MySQL volume mapping
+    ports:
+      - "3306:3306"  # MySQL Workbench connects on this port
+    networks:
+      - spring-demo
+
+volumes:
+  mysql-data:
+    driver: local
+
+networks:
+  spring-demo:
+    driver: bridge

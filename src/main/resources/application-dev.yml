@@ -1,0 +1,33 @@
+spring:
+  profiles:
+    active:
+    - dev
+   
+  servlet:
+    multipart:
+      max-file-size: 50MB
+  
+  mail:
+    host: localhost 
+    port: 1025
+    username: arjun
+    password: arjun
+    properties:
+      mail:
+        smtp:
+          trest: "*"
+        auth: true
+        starttls:
+          enable: true
+        connectiontimeout: 5000
+        timeout: 3000
+        wtitetimeout: 5000
+          
+springdoc:
+  default-produces-media-type: application/json
+  
+server:
+  servlet:
+    context-path: /api/v1/
+
+        

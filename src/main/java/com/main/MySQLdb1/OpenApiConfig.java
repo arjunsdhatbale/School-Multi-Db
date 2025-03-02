@@ -1,8 +1,10 @@
 //package com.main.MySQLdb1;
-//  url= http://localhost:8080/swagger-ui/index.html#/
-//import org.springdoc.core.GroupedOpenApi;
+//
+//import org.springdoc.core.models.GroupedOpenApi;
 //import org.springframework.context.annotation.Configuration;
 //
+////url= http:localhost:8080/swagger-ui/index.html#/
+// 
 //@Configuration
 //public class OpenApiConfig {
 //

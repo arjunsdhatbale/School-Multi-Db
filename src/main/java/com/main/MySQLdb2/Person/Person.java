@@ -6,6 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Size;
  
  
 @Entity
@@ -30,8 +31,11 @@ public class Person {
 	private String middleName;
 	@Column(name = "last_name")
 	private String lastName;
+	
+	@Size(min = 19, max = 30, message = "Age between 19 and 30")
 	@Column(name = "age")
 	private Short age;
+	
 	@Column(name = "alive")
 	private Boolean Alive;
 	public Person() {
